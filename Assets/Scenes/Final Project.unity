@@ -11817,7 +11817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412052227731471197, guid: 6accce5fe1b4d504c91396ddeb549060, type: 3}
       propertyPath: speedPlayer
-      value: 460
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 412052227731471197, guid: 6accce5fe1b4d504c91396ddeb549060, type: 3}
       propertyPath: spawnPointLvl02
