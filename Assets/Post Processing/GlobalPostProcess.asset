@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8518418770752497560
+--- !u!114 &-7471792458336760756
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18,10 +18,10 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 304
+    value: 270
   sampleCount:
     overrideState: 1
-    value: 20
+    value: 18
 --- !u!114 &-4089239250179309575
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -40,10 +40,10 @@ MonoBehaviour:
     value: 1
   mode:
     overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 0
     value: 0
+  intensity:
+    overrideState: 1
+    value: 0.31
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -60,8 +60,8 @@ MonoBehaviour:
     overrideState: 0
     value: -12
   thicknessModifier:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 3.52
   directLightingStrength:
     overrideState: 0
     value: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: GlobalPostProcess
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: -8518418770752497560}
+  - {fileID: -7471792458336760756}
   - {fileID: 3922687785122602082}
   - {fileID: -4089239250179309575}
 --- !u!114 &3922687785122602082
@@ -105,16 +105,16 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 25.5
+    value: 61.32
   threshold:
     overrideState: 1
     value: 0.99
   softKnee:
     overrideState: 1
-    value: 0.424
+    value: 0.509
   clamp:
     overrideState: 1
-    value: 65472
+    value: 56136
   diffusion:
     overrideState: 1
     value: 8.3
@@ -122,8 +122,8 @@ MonoBehaviour:
     overrideState: 1
     value: 0
   color:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 1, g: 0.8716302, b: 0.7216981, a: 1}
   fastMode:
     overrideState: 1
     value: 1
