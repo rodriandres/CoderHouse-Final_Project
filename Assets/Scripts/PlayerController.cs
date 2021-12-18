@@ -55,6 +55,14 @@ public class PlayerController : MonoBehaviour
             mgInventory.CountPoint(point);            
         }
 
+        if (other.gameObject.CompareTag("PlayerItem"))
+        {
+            GameObject item = other.gameObject;
+            item.SetActive(false);
+            mgInventory.AddInventoryOne(item);
+            mgInventory.CountPoint(item);
+        }
+
         if (other.gameObject.CompareTag("FinalPortal"))
         {
             transform.position = spawnPointLvl02.transform.position;

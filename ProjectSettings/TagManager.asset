@@ -10,6 +10,7 @@ TagManager:
   - Brick
   - FinalPortal
   - Final Portal
+  - PlayerItem
   layers:
   - Default
   - TransparentFX
