@@ -2377,7 +2377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameras:
-  - {fileID: 491839019}
+  - {fileID: 0}
   - {fileID: 0}
   indexCamera: 0
 --- !u!1001 &362758361
@@ -3463,7 +3463,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   stopNaNPropagation: 0
-  finalBlitToCameraTarget: 1
+  finalBlitToCameraTarget: 0
   antialiasingMode: 1
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -7452,7 +7452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 117b4ac02f287704b803a6f707b94e9f, type: 2}
+  sharedProfile: {fileID: 11400000, guid: e456dc2f6bdfa794196d570ecdace1bc, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1
