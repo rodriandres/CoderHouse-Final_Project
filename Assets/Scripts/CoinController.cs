@@ -22,4 +22,6 @@ public class CoinController : MonoBehaviour
     {
         return typePoint;
     }
+
+
 }

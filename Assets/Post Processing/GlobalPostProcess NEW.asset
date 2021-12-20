@@ -34,13 +34,13 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 61.32
+    value: 77.19
   threshold:
     overrideState: 1
     value: 0.99
   softKnee:
     overrideState: 1
-    value: 0.484
+    value: 0.762
   clamp:
     overrideState: 1
     value: 56136
@@ -81,10 +81,10 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 270
+    value: 263
   sampleCount:
     overrideState: 1
-    value: 18
+    value: 19
 --- !u!114 &8190570531688495705
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -103,10 +103,10 @@ MonoBehaviour:
     value: 1
   mode:
     overrideState: 1
-    value: 0
+    value: 1
   intensity:
     overrideState: 1
-    value: 0.31
+    value: 0.56
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
