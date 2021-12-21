@@ -6894,7 +6894,7 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 117b4ac02f287704b803a6f707b94e9f, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0.083
+  weight: 0.201
   priority: 0
 --- !u!1001 &1169312976
 PrefabInstance:
@@ -16653,6 +16653,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 725236385}
     m_Modifications:
+    - target: {fileID: 5507008531962531074, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
+      propertyPath: m_Intensity
+      value: 5.16
+      objectReference: {fileID: 0}
     - target: {fileID: 5507008532064361027, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
       propertyPath: m_Name
       value: FinalPortal
@@ -16700,6 +16704,14 @@ PrefabInstance:
     - target: {fileID: 5507008532064361036, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507008532176625485, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
+      propertyPath: m_Intensity
+      value: 5.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507008533077925915, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
+      propertyPath: m_Intensity
+      value: 5.16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
