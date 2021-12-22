@@ -8,15 +8,31 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rbPlayer;
 
     [SerializeField] private InventoryManager mgInventory;
+    [SerializeField] private UIInventory uiInventory;
+
+    private Inventory inventory;
+
 
     [SerializeField] private GameObject lightTarget;
     [SerializeField] private GameObject spawnPointLvl02;
+
+    private void Awake()
+    {
+        /*
+        ItemToCatch.SpawnItemToCatch(new Vector3(20,20), new Item { itemType = Item.ItemType.SpeedBoost, amount = 1 });
+        ItemToCatch.SpawnItemToCatch(new Vector3(-20,20), new Item { itemType = Item.ItemType.Coin, amount = 0 });
+        ItemToCatch.SpawnItemToCatch(new Vector3(0,-20), new Item { itemType = Item.ItemType.HealthCristal, amount = 2 });
+        */
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody>();
         mgInventory = GetComponent<InventoryManager>();
+
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
     }
 
     // Update is called once per frame
@@ -59,8 +75,8 @@ public class PlayerController : MonoBehaviour
         {
             GameObject item = other.gameObject;
             item.SetActive(false);
-            mgInventory.AddInventoryOne(item);
-            mgInventory.CountPoint(item);
+            Item newItem = other.GetComponent<Item>();
+            inventory.AddItem(newItem);
         }
 
         if (other.gameObject.CompareTag("FinalPortal"))
@@ -71,8 +87,8 @@ public class PlayerController : MonoBehaviour
 
     private void UseItem()
     {
-        GameObject point = mgInventory.GetInventoryOne();
-        point.SetActive(true);
-        point.transform.position = transform.position + new Vector3(0.5f, 0.5f, 0.5f);        
+        GameObject item = mgInventory.GetInventoryOne();
+        item.SetActive(true);
+            
     }
 }

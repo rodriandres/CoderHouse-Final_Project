@@ -19,12 +19,22 @@ public class HudController : MonoBehaviour
     void Update()
     {
         UpdatePointUI();
+        UpdateItems();
     }
 
     void UpdatePointUI()
     {
         int[] pointCount = mgInventory.GetPointQuantity();
         textPoint.text = "x" + pointCount[0];
+
+    }
+
+    void UpdateItems()
+    {
+        /*
+        int[] pointCount = mgInventory.GetPointQuantity();
+        textPoint.text = "x" + pointCount[0];
+        */
 
     }
 }
