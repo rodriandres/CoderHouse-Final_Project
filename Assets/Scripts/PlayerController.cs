@@ -12,13 +12,30 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject lightTarget;
     [SerializeField] private GameObject spawnPointLvl02;
 
+    public Inventory inventory;
+
+    public GameObject hand;
+
+
     // Start is called before the first frame update
     void Start()
     {
         rbPlayer = GetComponent<Rigidbody>();
         mgInventory = GetComponent<InventoryManager>();
+
+        inventory.ItemUse += Inventory_ItemUse();
+
     }
 
+    private void Inventory_ItemUse(object sender, InventoryEventArgs e)
+    {
+        IInvetoryItem item = e.Item;
+
+        // Do something
+
+        GameObject goItem = (item as MonoBehaviour).gameObject;
+        goItem.SetActive(true);
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -26,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.G))
         {
-            UseItem();
+            UseItemOld();
         }
         
 
@@ -61,10 +78,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void UseItem()
+    private void UseItemOld()
     {
         GameObject point = mgInventory.GetInventoryOne();
         point.SetActive(true);
         point.transform.position = transform.position + new Vector3(0.5f, 0.5f, 0.5f);        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            IInvetoryItem item = collision.collider.GetComponent<IInvetoryItem>();
+            if (item != null)
+            {
+                inventory.AddItem(item);
+            }
+        }
     }
 }
