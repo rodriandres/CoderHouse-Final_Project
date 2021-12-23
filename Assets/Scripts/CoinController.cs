@@ -15,11 +15,16 @@ public class CoinController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RandomRotatePoint();
     }
 
     public GameManager.typesPoints GetTypesPoints()
     {
         return typePoint;
+    }
+
+    public void RandomRotatePoint()
+    {
+        //transform.rotation = Random.rotation;
     }
 }
