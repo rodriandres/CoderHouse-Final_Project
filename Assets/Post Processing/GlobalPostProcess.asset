@@ -43,12 +43,12 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 0.6
+    value: 0.37
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
   ambientOnly:
-    overrideState: 1
+    overrideState: 0
     value: 1
   noiseFilterTolerance:
     overrideState: 0
@@ -66,10 +66,10 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   radius:
-    overrideState: 1
+    overrideState: 0
     value: 0.25
   quality:
-    overrideState: 1
+    overrideState: 0
     value: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -105,27 +105,27 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 102.53
+    value: 61.32
   threshold:
     overrideState: 1
-    value: 0
+    value: 0.87
   softKnee:
     overrideState: 1
     value: 0
   clamp:
-    overrideState: 0
-    value: 353.7
+    overrideState: 1
+    value: 56136
   diffusion:
-    overrideState: 0
-    value: 1.37
+    overrideState: 1
+    value: 8.14
   anamorphicRatio:
-    overrideState: 0
-    value: -0.85
+    overrideState: 1
+    value: -0
   color:
-    overrideState: 0
+    overrideState: 1
     value: {r: 1, g: 0.8716302, b: 0.7216981, a: 1}
   fastMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   dirtTexture:
     overrideState: 0
