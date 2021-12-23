@@ -18,10 +18,11 @@ public class HUD : MonoBehaviour
         foreach (Transform slot in inventoryPanel)
         {
             // Boder... Image
+            Debug.Log("2");
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
-            Debug.Log(image.sprite.name);
+            Debug.Log("3");
             // We found the empty slot
-            if (image.enabled)
+            if (!image.enabled)
             {
                 Debug.Log("image enabled");
                 image.enabled = true;

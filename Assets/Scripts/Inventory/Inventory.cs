@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
 
                 if (ItemAdded != null)
                 {
+                    Debug.Log("1");
                     ItemAdded(this, new InventoryEventArgs(item));
                 }
             }

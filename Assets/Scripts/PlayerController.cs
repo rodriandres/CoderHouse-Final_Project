@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,7 +25,7 @@ public class PlayerController : MonoBehaviour
         rbPlayer = GetComponent<Rigidbody>();
         mgInventory = GetComponent<InventoryManager>();
 
-        inventory.ItemUse += Inventory_ItemUse();
+        inventory.ItemUse += Inventory_ItemUse;
 
     }
 
