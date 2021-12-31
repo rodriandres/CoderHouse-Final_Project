@@ -2091,7 +2091,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353308461}
   m_LocalRotation: {x: -0.09349023, y: -0, z: -0, w: 0.9956202}
-  m_LocalPosition: {x: -0.03700018, y: 1.22, z: 0.16}
+  m_LocalPosition: {x: -0.03700018, y: 0.992, z: -1.044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491839022}
@@ -5043,33 +5043,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1284806992}
     m_Modifications:
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: difficulty
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: enemyPrefab.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: enemyPrefab.Array.data[1]
-      value: 
-      objectReference: {fileID: 2624739774397360177, guid: 5c7e48040a1fca44590c2165c672dd30, type: 3}
     - target: {fileID: 5859257841218304438, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
       propertyPath: m_Name
       value: Spawner (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 5859257841218304438, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: m_TagString
-      value: Spawner
-      objectReference: {fileID: 0}
     - target: {fileID: 7914460998570155011, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914460998570155011, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7914460998570155011, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5647,7 +5627,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068206432}
   m_LocalRotation: {x: -0.09349023, y: -0, z: -0, w: 0.9956202}
-  m_LocalPosition: {x: 0.47700024, y: 1.22, z: 0.16}
+  m_LocalPosition: {x: 0.47700024, y: 0.992, z: -1.044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491839022}
@@ -7497,7 +7477,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381693695}
   m_LocalRotation: {x: -0.09349023, y: -0, z: -0, w: 0.9956202}
-  m_LocalPosition: {x: -0.5170002, y: 1.22, z: 0.16}
+  m_LocalPosition: {x: -0.5170002, y: 0.992, z: -1.044}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491839022}
@@ -10029,32 +10009,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1284806992}
     m_Modifications:
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: difficulty
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: enemyPrefab.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: enemyPrefab.Array.data[1]
-      value: 
-      objectReference: {fileID: 2624739774397360177, guid: 5c7e48040a1fca44590c2165c672dd30, type: 3}
     - target: {fileID: 5859257841218304438, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
       propertyPath: m_Name
       value: Spawner (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 5859257841218304438, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: m_TagString
-      value: Spawner
-      objectReference: {fileID: 0}
     - target: {fileID: 7914460998570155011, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7914460998570155011, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7914460998570155011, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
@@ -11207,7 +11167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &2097403932
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -11249,10 +11209,10 @@ ParticleSystemRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 10.23
+  m_MaxParticleSize: 13.66
   m_CameraVelocityScale: 0
   m_VelocityScale: 0.02
   m_LengthScale: 3
@@ -11977,7 +11937,7 @@ ParticleSystem:
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
-    m_Texture: {fileID: 2800000, guid: 2b355c8699ce9d643aa1b875be834dd5, type: 3}
+    m_Texture: {fileID: 2800000, guid: 8e7dd6c958e3045499998e7e9a05c616, type: 3}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
     m_TextureUVChannel: 0
@@ -12546,15 +12506,15 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
-        key1: {r: 0.98039216, g: 0.8923763, b: 0.17254902, a: 1}
-        key2: {r: 0.9811321, g: 0.17123532, b: 0.17123532, a: 1}
+        key1: {r: 0.9811321, g: 0.17123532, b: 0.17123532, a: 1}
+        key2: {r: 0.98039216, g: 0.8923763, b: 0.17254902, a: 1}
         key3: {r: 0.9811321, g: 0.17123532, b: 0.17123532, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 31997
+        ctime1: 16384
         ctime2: 65535
         ctime3: 65535
         ctime4: 0
@@ -14786,7 +14746,7 @@ ParticleSystem:
     separateAxes: 0
     range: {x: 0, y: 1}
   ColorBySpeedModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -14795,15 +14755,15 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
-        key1: {r: 0.9882878, g: 1, b: 0, a: 1}
-        key2: {r: 0.509434, g: 0, b: 0, a: 0}
+        key1: {r: 0.509434, g: 0, b: 0, a: 1}
+        key2: {r: 0.9882878, g: 1, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 49730
+        ctime1: 30262
         ctime2: 65535
         ctime3: 0
         ctime4: 0
@@ -16140,14 +16100,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1284806992}
     m_Modifications:
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: enemyPrefab.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3128223866220041050, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
-      propertyPath: enemyPrefab.Array.data[1]
-      value: 
-      objectReference: {fileID: 2624739774397360177, guid: 5c7e48040a1fca44590c2165c672dd30, type: 3}
     - target: {fileID: 5859257841218304438, guid: ee83e615f5056a9468e110eb09dd4cff, type: 3}
       propertyPath: m_Name
       value: Spawner
@@ -16355,12 +16307,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6738699299143841332, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.9851
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738699299143841332, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.9851
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738699299143841332, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.9851
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738699299143841332, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6738699299143841332, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.6221
       objectReference: {fileID: 0}
     - target: {fileID: 6738699299143841332, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16396,11 +16360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6738699299143841333, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
       propertyPath: m_Name
-      value: Cleaenr
-      objectReference: {fileID: 0}
-    - target: {fileID: 6738699299143841335, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
-      propertyPath: offset
-      value: 30
+      value: Cleaner
       objectReference: {fileID: 0}
     - target: {fileID: 6738699299143841335, guid: 38120b7637780744498d28e3fd096ba1, type: 3}
       propertyPath: player
