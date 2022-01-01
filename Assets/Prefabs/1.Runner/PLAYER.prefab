@@ -45,7 +45,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.53792745, b: 0, a: 1}
-  m_Intensity: 1.2
+  m_Intensity: 0.67
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4965,11 +4965,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0203b5b377c0a843852c0857ee8658d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPlayer: 470
+  speedPlayer: 380
   rbPlayer: {fileID: -1745304495457610343}
   mgInventory: {fileID: 5689934430067054386}
   lightTarget: {fileID: 0}
   spawnPointLvl02: {fileID: 0}
+  inventoryPanel: {fileID: 0}
+  inventory: {fileID: 0}
+  Hud: {fileID: 0}
+  Health: 4
 --- !u!114 &5689934430067054386
 MonoBehaviour:
   m_ObjectHideFlags: 0

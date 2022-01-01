@@ -38,10 +38,11 @@ public class CleanerController : MonoBehaviour
         }
     }
 
-  
+
 
     void LateUpdate()
     {
         transform.position = player.transform.position + new Vector3(0f, -0.3f, -8f);
     }
+
 }
