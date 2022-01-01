@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class SpeedBoost : MonoBehaviour, IInvetoryItem
 {
+    public Sprite _image = null; 
+    public GameObject _amountText = null;
+    public int _amount = 0;
+    public int speedIncrese = 0;
+    [SerializeField] private GameObject Player;
+
     public string Name
     {
         get
@@ -11,8 +17,6 @@ public class SpeedBoost : MonoBehaviour, IInvetoryItem
             return "SpeedBoost";
         }
     }
-
-    public Sprite _image = null;
 
     public Sprite Image 
     {
@@ -22,10 +26,39 @@ public class SpeedBoost : MonoBehaviour, IInvetoryItem
         }
     }
 
+    public GameObject AmountText
+    {
+        get
+        {
+            return _amountText;
+        }
+    }
+
+    public int Amount
+    {
+        get
+        {
+            return _amount;
+        }
+    }
+
+    public void OnDrop()
+    {
+        throw new System.NotImplementedException();
+    }
+
     public void OnPickUp()
     {
         // Add logic what happends to player when throw this power
         gameObject.SetActive(false);
+        AmountText.SetActive(false);
+    }
+
+    public void OnUse()
+    {
+        Debug.Log("usando item de velocidad..");
+        PlayerController player = Player.GetComponent<PlayerController>();
+        player.IncreaseSpeed(30, 3f);
     }
 
 }

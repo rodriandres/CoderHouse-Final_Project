@@ -10,7 +10,15 @@ public interface IInvetoryItem
 
     Sprite Image { get; }
 
+    GameObject AmountText { get; }
+
+    int Amount { get; }
+
     void OnPickUp();
+
+    void OnDrop();
+
+    void OnUse();
 }
 
 public class InventoryEventArgs : EventArgs

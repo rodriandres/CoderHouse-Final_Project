@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-
+    private static GameManager instance = null;
     public enum typesPoints { Yellow, Red };
 
+    public Inventory inventory;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

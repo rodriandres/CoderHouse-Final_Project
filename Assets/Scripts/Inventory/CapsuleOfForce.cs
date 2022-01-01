@@ -2,23 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SphereHealth : MonoBehaviour, IInvetoryItem
+public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
 {
     public Sprite _image = null;
     public GameObject _amountText = null;
     public int _amount = 0;
-    public int healthIncrease = 0;
-    [SerializeField] private GameObject Player;
-    //[SerializeField] private GameObject hud;
-
-    public HUD Hud;
-
 
     public string Name
     {
         get
         {
-            return "SphereHealth";
+            return "CapsuleOfForce";
         }
     }
 
@@ -58,14 +52,15 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
         AmountText.SetActive(false);
 
     }
+
     public void OnUse()
     {
-        PlayerLife lifes = Hud.transform.Find("HUD").GetComponent<PlayerLife>();
-        Debug.Log(lifes);
-        PlayerController player = Player.GetComponent<PlayerController>();
+        Debug.Log("May the force be with you");
+        //PlayerLife lifes = transform.Find("LifesPanel").GetComponent<PlayerLife>();
+        //PlayerController player = transform.Find("PLAYER").GetComponent<PlayerController>();
 
-        player.Health += 1;
-        lifes.HealLife(healthIncrease);
+        //player.Health += 1;
+        //lifes.HealLife(1);
 
     }
 }

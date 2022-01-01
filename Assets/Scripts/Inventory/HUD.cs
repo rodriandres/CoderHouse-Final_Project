@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
-    public Inventory Inventory;
+    public Inventory inventory;
+
     // Start is called before the first frame update
     void Start()
     {
-        Inventory.ItemAdded += InventoryScript_ItemAdded;
+        inventory.ItemAdded += InventoryScript_ItemAdded;
+        inventory.ItemRemoved += InventoryScript_ItemRemoved;
     }
 
     private void InventoryScript_ItemAdded(object sender, InventoryEventArgs e)
@@ -18,20 +20,40 @@ public class HUD : MonoBehaviour
         foreach (Transform slot in inventoryPanel)
         {
             // Boder... Image
-            Debug.Log("2");
             Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
-            Debug.Log("3");
+
             // We found the empty slot
             if (!image.enabled)
             {
-                Debug.Log("image enabled");
                 image.enabled = true;
-                image.sprite = e.Item.Image;
+                image.sprite = e.Item.Image;    
 
                 // POSIBLE TODO HERE: Store reference to the item
 
                 break;
             }
         }
+    }
+
+    private void InventoryScript_ItemRemoved(object sender, InventoryEventArgs e)
+    {
+       
+        Transform inventoryPanel = transform.Find("inventoryPanel");
+
+        foreach (Transform slot in inventoryPanel)
+        {
+            // Boder... Image
+            Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
+            if (image.sprite == e.Item.Image)
+            {
+                // We found the empty slot
+
+                image.enabled = false;
+                image.sprite = null;
+                    
+                break;
+            }
+        }
+
     }
 }
