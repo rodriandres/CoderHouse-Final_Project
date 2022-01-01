@@ -11,13 +11,13 @@ public class CleanerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChasingPlayer();
+        //ChasingPlayer();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,13 +38,10 @@ public class CleanerController : MonoBehaviour
         }
     }
 
-    //Vector3 GetPlayerDistance()
-    //{
-    //    return player.transform.position - transform.position;
-    //}
+  
 
-    void ChasingPlayer ()
+    void LateUpdate()
     {
-        transform.position = new Vector3(0, 0, player.transform.position.z - offset);
+        transform.position = player.transform.position + new Vector3(0f, -0.3f, -8f);
     }
 }

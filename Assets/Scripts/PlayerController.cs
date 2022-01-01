@@ -71,19 +71,15 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalaxis = Input.GetAxis("Horizontal");
         float verticalaxis = Input.GetAxis("Vertical");
-        //transform.Translate(new Vector3(horizontalaxis, 0, verticalaxis) * speedPlayer * Time.deltaTime);
         rbPlayer.AddForce(new Vector3(horizontalaxis, 0, verticalaxis) * speedPlayer * Time.deltaTime, ForceMode.Impulse);
         
-
-        //transform.position += transform.right * horizontalaxis * Time.deltaTime;
-        //transform.position += transform.forward * verticalaxis * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
         {
-            //Destroy(other.gameObject);
+            
             GameObject point = other.gameObject;
             point.SetActive(false);
             mgInventory.AddInventoryOne(point);
