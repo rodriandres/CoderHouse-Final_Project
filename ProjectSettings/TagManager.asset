@@ -8,8 +8,11 @@ TagManager:
   - Point
   - Spawner
   - Brick
-  - FinalPortal
-  - Final Portal
+  - Item
+  - FinalPortal1
+  - FinalPortal2
+  - FinalPortal3
+  - FinalPortal4
   layers:
   - Default
   - TransparentFX

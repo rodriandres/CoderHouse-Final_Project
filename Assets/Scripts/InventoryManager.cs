@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     
     
-    private Stack inventoryOne;
+    private List<GameObject> inventoryOne;
 
     [SerializeField] private int[] pointQuantity = { 0, 0, 0 };
 
@@ -14,7 +14,7 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventoryOne = new Stack();
+        inventoryOne = new List<GameObject>();
     }
 
     public int [] GetPointQuantity()
@@ -30,12 +30,17 @@ public class InventoryManager : MonoBehaviour
 
     public void AddInventoryOne(GameObject item)
     {
-        inventoryOne.Push(item);
+        inventoryOne.Add(item);
     }
 
-    public GameObject GetInventoryOne()
+    public void RemoveInventoryOne(int amount)
     {
-        return inventoryOne.Pop() as GameObject;
+        pointQuantity[0] -= amount;
+    }
+
+    public List<GameObject> GetInventoryOne()
+    {
+        return inventoryOne;
     }
 
     public void CountPoint (GameObject point)
