@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class SphereHealth : MonoBehaviour, IInvetoryItem
 {
     public Sprite _image = null;
@@ -9,11 +8,7 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
     public int _amount = 0;
     public int healthIncrease = 0;
     [SerializeField] private GameObject Player;
-    //[SerializeField] private GameObject hud;
-
-    public HUD Hud;
-
-
+    [SerializeField] private GameObject hud;
     public string Name
     {
         get
@@ -21,7 +16,6 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
             return "SphereHealth";
         }
     }
-
     public Sprite Image
     {
         get
@@ -29,7 +23,6 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
             return _image;
         }
     }
-
     public GameObject AmountText
     {
         get
@@ -37,7 +30,6 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
             return _amountText;
         }
     }
-
     public int Amount
     {
         get
@@ -45,27 +37,22 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
             return _amount;
         }
     }
-
     public void OnDrop()
     {
         throw new System.NotImplementedException();
     }
-
     public void OnPickUp()
     {
         // Add logic what happends to player when throw this power
         gameObject.SetActive(false);
         AmountText.SetActive(false);
-
     }
     public void OnUse()
     {
-        PlayerLife lifes = Hud.transform.Find("HUD").GetComponent<PlayerLife>();
+        PlayerLife lifes = hud.transform.GetComponent<PlayerLife>();
         Debug.Log(lifes);
         PlayerController player = Player.GetComponent<PlayerController>();
-
         player.Health += 1;
         lifes.HealLife(healthIncrease);
-
     }
 }
