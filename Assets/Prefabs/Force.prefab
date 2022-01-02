@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fcf650e151e5e94a969488eea71c28a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 30
-  timeToLive: 1.5
+  pushForce: 120
+  timeToLive: 2.5
 --- !u!54 &-6216620539996303430
 Rigidbody:
   m_ObjectHideFlags: 0
