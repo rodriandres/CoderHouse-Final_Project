@@ -79,7 +79,10 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("FinalPortal1"))
         {
+            GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl02.transform.position;
+
+
         }
 
         if (other.gameObject.CompareTag("FinalPortal2"))

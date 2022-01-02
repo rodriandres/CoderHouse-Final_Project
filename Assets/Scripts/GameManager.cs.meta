@@ -3,7 +3,12 @@ guid: 05b66496e9517294b83f39e1cabb913e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - inventory: {instanceID: 0}
+  - goLvl1: {fileID: 4703243734302713256, guid: 568aee1091c674140ad6add79b1a4933, type: 3}
+  - goLvl2: {fileID: 4548490419121993503, guid: 346d5d35c4f40c34fb0408ed9071b402, type: 3}
+  - goLvl3: {instanceID: 0}
+  - goLvl4: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

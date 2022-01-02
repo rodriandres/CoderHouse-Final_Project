@@ -35,7 +35,7 @@ public class CleanerController : MonoBehaviour
         if (other.gameObject.CompareTag("Spawner"))
         {
             Debug.Log("Toco el Cleaner");
-            Destroy(other.gameObject);
+            
         }
     }
 
