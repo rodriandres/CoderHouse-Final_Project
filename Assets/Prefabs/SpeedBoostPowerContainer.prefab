@@ -144,6 +144,7 @@ MonoBehaviour:
   _amountText: {fileID: 5703369702617815241}
   _amount: 3
   speedIncrese: 500
+  Player: {fileID: 7736045019256119253, guid: 6accce5fe1b4d504c91396ddeb549060, type: 3}
 --- !u!1 &5703369702617815241
 GameObject:
   m_ObjectHideFlags: 0
