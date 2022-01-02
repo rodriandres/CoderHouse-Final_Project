@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            UsePower(0);
+            UsePower();
         }
     }
 
@@ -94,43 +94,22 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Item"))
         {
             TextMesh text = other.gameObject.transform.GetChild(0).GetComponent<TextMesh>();
-            List<IInvetoryItem> listOfItems = inventory.GetItems();
+            IInvetoryItem InventoryItem = inventory.GetItem();
 
             int powerAmount = int.Parse(text.text.Replace("x", ""));
             int pointCount = mgInventory.GetPointQuantity()[0];
-
-            //Debug.Log(pointCount);
-            //Debug.Log("cantidad de items con indice 0: " + listOfItems.Count);
-            if (listOfItems.Count <= 0) //  it's by index of the list Items
+            IInvetoryItem item = other.GetComponent<IInvetoryItem>();
+            if (InventoryItem != null) //  it's by index of the list Items
             {
-               IInvetoryItem item = other.GetComponent<IInvetoryItem>();
-                Debug.Log("count before: " + listOfItems.Count);
-                if (listOfItems.Count == 0)
+                Debug.Log("count before: " + InventoryItem);   
+                if (InventoryItem.Image.name == item.Image.name)
                 {
                     if (powerAmount <= pointCount) // Ask if has the money to buy the item/power
                     {
                         if (item != null)
                         {
                             inventory.AddItem(item);
-                            Debug.Log("count after: " + listOfItems.Count);
-
-                            mgInventory.RemoveInventoryOne(powerAmount);
-                            Debug.Log("left coins: " + mgInventory.GetPointQuantity()[0]);
-                        }
-                    }
-                    else
-                    {
-                        Debug.Log("No Tienes suficiente dinero");
-                    }
-                }    
-                else if (!listOfItems.Any(x => x.Image.name == item.Image.name))
-                {
-                    if (powerAmount <= pointCount) // Ask if has the money to buy the item/power
-                    {
-                        if (item != null)
-                        {
-                            inventory.AddItem(item);
-                            Debug.Log("count after: " + listOfItems.Count);
+                            Debug.Log("count after: " + InventoryItem);
 
                             mgInventory.RemoveInventoryOne(powerAmount);
                             Debug.Log("left coins: " + mgInventory.GetPointQuantity()[0]);
@@ -141,45 +120,55 @@ public class PlayerController : MonoBehaviour
                         Debug.Log("No Tienes suficiente dinero");
                     }
                 }
-            }   
+            }  
+            else if(InventoryItem == null)
+            {
+                if (powerAmount <= pointCount) // Ask if has the money to buy the item/power
+                {
+                    if (item != null)
+                    {
+                        inventory.AddItem(item);
+                        Debug.Log("count after: " + InventoryItem);
+
+                        mgInventory.RemoveInventoryOne(powerAmount);
+                        Debug.Log("left coins: " + mgInventory.GetPointQuantity()[0]);
+                    }
+                }
+                else
+                {
+                    Debug.Log("No Tienes suficiente dinero");
+                }
+            }
             else
             {
                 Debug.Log("Tu inventario esta lleno");
             }
         }
     }
-    private void UsePower(int indice)
+    private void UsePower()
     {
-        List<IInvetoryItem> listOfInventoryItems = inventory.GetItems();
-        Debug.Log("index Lista de items: " + listOfInventoryItems.Count);
-        if (listOfInventoryItems.Count > 0)
+        IInvetoryItem InventoryItem = inventory.GetItem();
+        if (InventoryItem != null)
         {
-            Transform inventoryPanelTransform = inventoryPanel.transform;
-            
-            foreach (Transform slot in inventoryPanelTransform)
+            Transform itemPanelTransform = inventoryPanel.transform.GetChild(0);
+            // Boder... Image
+            Image image = itemPanelTransform.GetChild(0).GetChild(0).GetComponent<Image>();
+            if (InventoryItem != null)
             {
-                // Boder... Image
-                Image image = slot.GetChild(0).GetChild(0).GetComponent<Image>();
-                if (listOfInventoryItems.ElementAtOrDefault(indice) != null)
+                IInvetoryItem item = InventoryItem;
+                if (image.sprite.name == item.Image.name)
                 {
-                    IInvetoryItem item = listOfInventoryItems[indice];
-                    if (image.sprite.name == item.Image.name)
-                    {
-                        // Set slot
-                        
-                        image.enabled = false;
-                        image.sprite = null;
-                        inventory.UseItem(item);
-                        inventory.RemoveItem(item);
-                        Debug.Log("cantidad de items: " + listOfInventoryItems.Count);
-                        break;
-                    }
+                    // Set slot
+
+                    image.enabled = false;
+                    image.sprite = null;
+                    inventory.UseItem(item);
+                    inventory.RemoveItem(item);
                 }
-                else
-                {
-                    Debug.Log("No tienes un item en ese slot");
-                }
-                
+            }
+            else
+            {
+                Debug.Log("No tienes un item en ese slot");
             }
         }
     }

@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
 {
     public Sprite _image = null;
     public GameObject _amountText = null;
     public int _amount = 0;
-
+    [SerializeField] private Camera cam;
+    [SerializeField] private GameObject force;
+    //Acá pueden incluir un audiosource y un audioclip
+    [SerializeField] private float forceSpeed = -30f;
+    [SerializeField] private Vector3 direction = new Vector3(0f, 0f, 1f);
     public string Name
     {
         get
@@ -15,7 +18,6 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
             return "CapsuleOfForce";
         }
     }
-
     public Sprite Image
     {
         get
@@ -23,7 +25,6 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
             return _image;
         }
     }
-
     public GameObject AmountText
     {
         get
@@ -31,7 +32,6 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
             return _amountText;
         }
     }
-
     public int Amount
     {
         get
@@ -39,28 +39,24 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
             return _amount;
         }
     }
-
     public void OnDrop()
     {
         throw new System.NotImplementedException();
     }
-
     public void OnPickUp()
     {
         // Add logic what happends to player when throw this power
         gameObject.SetActive(false);
         AmountText.SetActive(false);
-
     }
-
     public void OnUse()
     {
         Debug.Log("May the force be with you");
-        //PlayerLife lifes = transform.Find("LifesPanel").GetComponent<PlayerLife>();
-        //PlayerController player = transform.Find("PLAYER").GetComponent<PlayerController>();
-
-        //player.Health += 1;
-        //lifes.HealLife(1);
-
+        InstantiateForce();
+    }
+    private void InstantiateForce()
+    {
+        GameObject forceInstance = Instantiate(force, cam.transform.position, Quaternion.identity);
+        forceInstance.GetComponent<Rigidbody>().velocity = (direction - cam.transform.position).normalized * forceSpeed;
     }
 }

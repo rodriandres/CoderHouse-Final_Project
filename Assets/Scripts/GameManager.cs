@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance = null;
+    public static GameManager instance = null;
     public enum typesPoints { Yellow, Red };
 
     public Inventory inventory;

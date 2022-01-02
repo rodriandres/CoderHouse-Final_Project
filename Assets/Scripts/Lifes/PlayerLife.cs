@@ -9,8 +9,16 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private bool dead;
     private void Start()
     {
-        //Transform lifePanel = heartsPanel.gameObject.transform.Find("LifesPanel");
-        //lifes = lifePanel.;
+        Transform lifePanel = transform.Find("LifesPanel");
+        int max = lifePanel.childCount;
+        for (int i = 0; i < max; i++)
+        {
+            lifePanel.GetChild(i).gameObject.SetActive(false);
+        }
+        for (int i = 0; i < lifes; i++)
+        {
+            lifePanel.GetChild(i).gameObject.SetActive(true);
+        }
     }
     // Update is called once per frame
     void Update()
@@ -48,7 +56,15 @@ public class PlayerLife : MonoBehaviour
             for (int i = 0; i < healValue; i++)
             {
                 int max = lifePanel.childCount;
-                lifePanel.GetChild(max - 1).gameObject.SetActive(true);
+                int actives = 0;
+                for (i = 0; i < max; i++)
+                {
+                    if (lifePanel.GetChild(i).gameObject.activeSelf)
+                    {
+                        actives += 1;
+                    }
+                }
+                lifePanel.GetChild(actives).gameObject.SetActive(true);
             }
         }
     }
