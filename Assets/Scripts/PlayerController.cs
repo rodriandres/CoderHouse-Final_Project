@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject lightTarget;
     [SerializeField] private GameObject spawnPointLvl02;
+    [SerializeField] private GameObject spawnPointLvl03;
+    [SerializeField] private GameObject spawnPointLvl04;
 
     [SerializeField] private GameObject inventoryPanel;
 
@@ -47,24 +49,13 @@ public class PlayerController : MonoBehaviour
     {
         IInvetoryItem item = e.Item;
 
-        // Do something
-
+        
         item.OnUse();
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         MovementPlayer();
-
-        /*
-        if (Input.GetKeyUp(KeyCode.G))
-        {
-            UseItemOld();
-        }
-        */
-
-        // Use the ItemPowers
-
     }
 
     void MovementPlayer()
@@ -83,13 +74,27 @@ public class PlayerController : MonoBehaviour
             GameObject point = other.gameObject;
             point.SetActive(false);
             mgInventory.AddInventoryOne(point);
-            mgInventory.CountPoint(point);            
+            mgInventory.CountPoint(point);
         }
 
-        if (other.gameObject.CompareTag("FinalPortal"))
+        if (other.gameObject.CompareTag("FinalPortal1"))
         {
+            GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl02.transform.position;
+
+
         }
+
+        if (other.gameObject.CompareTag("FinalPortal2"))
+        {
+            transform.position = spawnPointLvl03.transform.position;
+        }
+
+        if (other.gameObject.CompareTag("FinalPortal3"))
+        {
+            transform.position = spawnPointLvl04.transform.position;
+        }
+
 
         if (other.gameObject.CompareTag("Item"))
         {

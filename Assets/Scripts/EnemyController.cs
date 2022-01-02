@@ -21,10 +21,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        //LookAtLerp(player);
-        //MoveEnemy(Vector3.back);
-        //MoveTowards();
-        //Destroy(gameObject, lifetime);
+        
 
         Vector3 playerDirection = GetPlayerDirection();
         rbEnemy.AddForce(playerDirection * Time.deltaTime);
