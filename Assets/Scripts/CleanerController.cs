@@ -34,6 +34,7 @@ public class CleanerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Spawner"))
         {
+            Debug.Log("Toco el Cleaner");
             Destroy(other.gameObject);
         }
     }
@@ -42,7 +43,7 @@ public class CleanerController : MonoBehaviour
 
     void LateUpdate()
     {
-        transform.position = player.transform.position + new Vector3(0f, -0.3f, -8f);
+        transform.position = player.transform.position + new Vector3(0f, -0.3f, -25f);
     }
 
 }

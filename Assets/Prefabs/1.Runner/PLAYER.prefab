@@ -4884,7 +4884,7 @@ GameObject:
   - component: {fileID: 1656753344}
   m_Layer: 3
   m_Name: PLAYER
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4965,12 +4965,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0203b5b377c0a843852c0857ee8658d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedPlayer: 380
+  speedPlayer: 370
   rbPlayer: {fileID: -1745304495457610343}
   mgInventory: {fileID: 5689934430067054386}
   lightTarget: {fileID: 0}
   spawnPointLvl02: {fileID: 0}
+  spawnPointLvl03: {fileID: 0}
+  spawnPointLvl04: {fileID: 0}
+  spawnPointLvl05: {fileID: 0}
   inventoryPanel: {fileID: 0}
+  spawnerslvl1: {fileID: 0}
   inventory: {fileID: 0}
   Hud: {fileID: 0}
   Health: 4

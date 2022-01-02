@@ -15,6 +15,6 @@ public class ParticleFollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player.transform.position + new Vector3(0f, -0.3f, -0.8f);
+        transform.position = player.transform.position + new Vector3(0f, -0.3f, -0.6f);
     }
 }
