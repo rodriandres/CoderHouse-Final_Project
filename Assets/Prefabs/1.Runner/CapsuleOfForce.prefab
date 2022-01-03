@@ -240,6 +240,8 @@ MonoBehaviour:
   _amountText: {fileID: 8842943540820782149}
   _amount: 3
   cam: {fileID: 0}
-  force: {fileID: 0}
+  force: {fileID: 1480626023254331336, guid: 3718a49cc7dbd684d8bdd84b9fa0ed3a, type: 3}
   forceSpeed: 30
   direction: {x: 0, y: 0, z: 1}
+  source: {fileID: 4694053267321209256, guid: 87bb10639c56f4a409629e91f67d2a9c, type: 3}
+  clip: {fileID: 8300000, guid: beaefe6457f97214a98ac0f8c4aa7b40, type: 3}

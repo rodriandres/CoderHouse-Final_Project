@@ -46,6 +46,7 @@ MonoBehaviour:
   enemyPrefab:
   - {fileID: 8088989400566741348, guid: 708a916ab4aff7146b9900adf73ad390, type: 3}
   - {fileID: 2624739774397360177, guid: 5c7e48040a1fca44590c2165c672dd30, type: 3}
+  - {fileID: 7425448280645004183, guid: 584a78d08330c6d48a84a2174476ced6, type: 3}
   startDelay: 2
   spawnInterval: 1.5
   difficulty: 2

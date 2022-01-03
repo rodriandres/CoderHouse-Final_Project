@@ -211,6 +211,7 @@ public class PlayerController : MonoBehaviour
         {
             Health = 0;
             mPlayerLife.TakeDamage(dmg);
+
         }
     }
 

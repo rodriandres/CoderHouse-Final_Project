@@ -42,6 +42,8 @@ public class PlayerLife : MonoBehaviour
         {
             Debug.Log("Your are Dead");
             lossingHud.SetActive(true);
+
+
             Time.timeScale = 0f;
             startCounter = true;
         }
@@ -88,6 +90,7 @@ public class PlayerLife : MonoBehaviour
         else
         {
             dead = true;
+
         }
     }
     public void HealLife(int healValue)

@@ -28,5 +28,7 @@ public class CoinController : MonoBehaviour
 
     }
 
+     
+
 
 }
