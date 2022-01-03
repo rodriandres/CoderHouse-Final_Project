@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    [SerializeField] private float speedEnemy = 4f;
+    [SerializeField] private float speedEnemy = 6f;
     private GameObject player;
     [SerializeField] private float lifetime;
     [SerializeField] private float speedToLook = .5f;
