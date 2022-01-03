@@ -9,8 +9,15 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
     [SerializeField] private Camera cam;
     [SerializeField] private GameObject force;
     //Acá pueden incluir un audiosource y un audioclip
-    [SerializeField] private float forceSpeed = -30f;
+    [SerializeField] private float forceSpeed = 30f;
     [SerializeField] private Vector3 direction = new Vector3(0f, 0f, 1f);
+
+    private Transform forceStart;
+
+    private void Start()
+    {
+        forceStart = GameObject.FindGameObjectWithTag("ForceReference").GetComponent<Transform>();
+    }
     public string Name
     {
         get
@@ -56,7 +63,7 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
     }
     private void InstantiateForce()
     {
-        GameObject forceInstance = Instantiate(force, cam.transform.position, Quaternion.identity);
-        forceInstance.GetComponent<Rigidbody>().velocity = (direction - cam.transform.position).normalized * forceSpeed;
+        GameObject forceInstance = Instantiate(force, forceStart.position, Quaternion.identity);
+        forceInstance.GetComponent<Rigidbody>().velocity = (direction).normalized * forceSpeed;
     }
 }

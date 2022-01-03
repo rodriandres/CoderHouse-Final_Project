@@ -13,6 +13,12 @@ TagManager:
   - FinalPortal2
   - FinalPortal3
   - FinalPortal4
+  - ForceReference
+  - LVL1
+  - LVL2
+  - LVL3
+  - LVL4
+  - HUD
   layers:
   - Default
   - TransparentFX
