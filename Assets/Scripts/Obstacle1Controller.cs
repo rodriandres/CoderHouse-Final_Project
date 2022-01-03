@@ -7,6 +7,7 @@ public class Obstacle1Controller : MonoBehaviour
     private GameObject player;
     private Collider playerCol;
     private GameObject lifeHud;
+    public CameraShake cameraShake;
      
 
 
@@ -31,6 +32,9 @@ public class Obstacle1Controller : MonoBehaviour
         if (collision.collider == playerCol)
         {
             script.TakeDamage(1);
+            FindObjectOfType<AudioManager>().Play("PlayerDeath");
+            StartCoroutine(cameraShake.Shake(.14f,.4f));
+
         }
     }
 }

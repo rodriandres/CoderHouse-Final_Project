@@ -12,6 +12,9 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
     [SerializeField] private float forceSpeed = 30f;
     [SerializeField] private Vector3 direction = new Vector3(0f, 0f, 1f);
 
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
+
     private Transform forceStart;
 
     private void Start()
@@ -60,6 +63,7 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
     {
         Debug.Log("May the force be with you");
         InstantiateForce();
+        source.PlayOneShot(clip);
     }
     private void InstantiateForce()
     {
