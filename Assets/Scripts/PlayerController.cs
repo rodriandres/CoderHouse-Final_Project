@@ -31,6 +31,11 @@ public class PlayerController : MonoBehaviour
 
     public int Health;
 
+    [SerializeField] private AudioSource source;
+    [SerializeField] private AudioClip clip;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,12 +89,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Point"))
-        {
-            
+        {            
             GameObject point = other.gameObject;
             point.SetActive(false);
             mgInventory.AddInventoryOne(point);
             mgInventory.CountPoint(point);
+
+            source.PlayOneShot(clip);
         }
 
         if (other.gameObject.CompareTag("FinalPortal1"))

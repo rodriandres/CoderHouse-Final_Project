@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinController : MonoBehaviour
+public class WorldCleaner : MonoBehaviour
 {
-    [SerializeField] private GameManager.typesPoints typePoint;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +16,11 @@ public class CoinController : MonoBehaviour
         
     }
 
-    public GameManager.typesPoints GetTypesPoints()
+    private void OnTriggerEnter(Collider other)
     {
-        return typePoint;
+        if (other.gameObject.CompareTag("Brick"))
+        {
+            Destroy(other.gameObject);
+        }
     }
-
-    public void RandomRotatePoint()
-    {
-
-    }
-
-
 }

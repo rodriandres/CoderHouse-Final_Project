@@ -25,6 +25,10 @@ public class EnemyController : MonoBehaviour
 
         Vector3 playerDirection = GetPlayerDirection();
         rbEnemy.AddForce(playerDirection * Time.deltaTime);
+        if (transform.position.y <= -125f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     
