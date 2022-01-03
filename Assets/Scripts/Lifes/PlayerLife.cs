@@ -64,41 +64,31 @@ public class PlayerLife : MonoBehaviour
             int actives = 0;
             lifes -= dmg;
             int max = lifePanel.childCount;
-
             for (int i = 0; i < max; i++)
             {
                 if (lifePanel.GetChild(i).gameObject.activeSelf)
                 {
                     actives += 1;
                 }
-
             }
-
             int containernumber = 0;
-
             for (int i = 0; i < max; i++)
-            {   
-                if (containernumber < actives)
+            {
+                if (containernumber == actives - 1)
+                {
+                    lifePanel.GetChild(containernumber).gameObject.SetActive(false);
+                    actives -= 1;
+                }
+                else
                 {
                     containernumber += 1;
                 }
-
-                else
-                {
-                    lifePanel.GetChild(max - actives).gameObject.SetActive(false);
-                    actives -= 1;
-                }
-                
             }
-
-
         }
         else
         {
             dead = true;
         }
-
-        
     }
     public void HealLife(int healValue)
     {
