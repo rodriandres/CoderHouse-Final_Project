@@ -61,11 +61,28 @@ public class PlayerLife : MonoBehaviour
         Transform lifePanel = transform.Find("LifesPanel");
         if (lifes >= 1 && !dead)
         {
-            for (int i = 0; i < dmg; i++)
+            int actives = 0;
+            lifes -= dmg;
+            int max = lifePanel.childCount;
+            for (int i = 0; i < max; i++)
             {
-                lifes -= 1;
-                int max = lifePanel.childCount;
-                lifePanel.GetChild(max).gameObject.SetActive(false);
+                if (lifePanel.GetChild(i).gameObject.activeSelf)
+                {
+                    actives += 1;
+                }
+            }
+            int containernumber = 0;
+            for (int i = 0; i < max; i++)
+            {
+                if (containernumber == actives - 1)
+                {
+                    lifePanel.GetChild(containernumber).gameObject.SetActive(false);
+                    actives -= 1;
+                }
+                else
+                {
+                    containernumber += 1;
+                }
             }
         }
         else
@@ -80,6 +97,12 @@ public class PlayerLife : MonoBehaviour
         if (lifes >= 1)
         {
             lifes += healValue;
+
+            if (lifes >= 4)
+            {
+                lifes = 4;
+            }
+            
             for (int i = 0; i < healValue; i++)
             {
                 int max = lifePanel.childCount;
@@ -91,6 +114,7 @@ public class PlayerLife : MonoBehaviour
                         actives += 1;
                     }
                 }
+
                 lifePanel.GetChild(actives).gameObject.SetActive(true);
             }
         }
