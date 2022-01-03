@@ -330,7 +330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6739575790285157296
 Transform:
   m_ObjectHideFlags: 0
@@ -654,11 +654,11 @@ GameObject:
   - component: {fileID: 6739575791313709318}
   m_Layer: 0
   m_Name: SCENE-LVL4--------
-  m_TagString: Untagged
+  m_TagString: LVL4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6739575791313709318
 Transform:
   m_ObjectHideFlags: 0
@@ -973,11 +973,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5507008532064361027, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
       propertyPath: m_Name
-      value: FinalPortal
+      value: FinalPortal4
       objectReference: {fileID: 0}
     - target: {fileID: 5507008532064361027, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
       propertyPath: m_TagString
-      value: FinalPortal1
+      value: FinalPortal4
       objectReference: {fileID: 0}
     - target: {fileID: 5507008532064361036, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
       propertyPath: m_RootOrder

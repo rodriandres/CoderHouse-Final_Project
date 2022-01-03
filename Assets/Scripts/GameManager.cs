@@ -12,13 +12,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject goLvl2;
     [SerializeField] private GameObject goLvl3;
     [SerializeField] private GameObject goLvl4;
+
     enum levels { lvl1,lvl2,lvl3,lvl4}
 
     [SerializeField] levels currentlevel;
 
+    private void Start()
+    {
+        
+    }
 
     private void Awake()
     {
+        goLvl1 = GameObject.FindGameObjectWithTag("LVL1");
+        goLvl2 = GameObject.FindGameObjectWithTag("LVL2");
+        goLvl3 = GameObject.FindGameObjectWithTag("LVL3");
+        goLvl4 = GameObject.FindGameObjectWithTag("LVL4");
+
         if (instance == null)
         {
             instance = this;

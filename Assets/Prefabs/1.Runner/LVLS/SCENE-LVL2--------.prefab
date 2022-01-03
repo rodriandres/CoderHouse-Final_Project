@@ -1338,7 +1338,7 @@ GameObject:
   - component: {fileID: 4548490419121993502}
   m_Layer: 0
   m_Name: SCENE-LVL2--------
-  m_TagString: Untagged
+  m_TagString: LVL2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4827,6 +4827,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5507008532064361027, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
       propertyPath: m_Name
+      value: FinalPortal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507008532064361027, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}
+      propertyPath: m_TagString
       value: FinalPortal2
       objectReference: {fileID: 0}
     - target: {fileID: 5507008532064361036, guid: 7115c5a5a5554804daebc3b73a63e00c, type: 3}

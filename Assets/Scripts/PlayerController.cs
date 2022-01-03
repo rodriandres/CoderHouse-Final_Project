@@ -8,6 +8,7 @@ using System.Linq;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speedPlayer = 3f;
+    [SerializeField] private float limitSpeed = 350f;
     [SerializeField] private Rigidbody rbPlayer;
 
     [SerializeField] private InventoryManager mgInventory;
@@ -16,8 +17,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject spawnPointLvl02;
     [SerializeField] private GameObject spawnPointLvl03;
     [SerializeField] private GameObject spawnPointLvl04;
+    [SerializeField] private GameObject winningHud;
 
     [SerializeField] private GameObject inventoryPanel;
+
+    private Quaternion defaultRotation;
 
     private PlayerLife mPlayerLife;
 
@@ -35,6 +39,12 @@ public class PlayerController : MonoBehaviour
 
         inventory.ItemUse += Inventory_ItemUse;
         mPlayerLife = Hud.transform.Find("LifesPanel").GetComponent<PlayerLife>();
+
+        defaultRotation = transform.rotation;
+
+        winningHud.SetActive(false);
+
+        
     }
 
     private void Update()
@@ -42,6 +52,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             UsePower();
+        }
+
+        if (speedPlayer > limitSpeed)
+        {
+            speedPlayer = limitSpeed;
         }
     }
 
@@ -81,18 +96,26 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl02.transform.position;
-
-
+            transform.rotation = defaultRotation;
         }
 
         if (other.gameObject.CompareTag("FinalPortal2"))
         {
+            GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl03.transform.position;
+            transform.rotation = defaultRotation;
         }
 
         if (other.gameObject.CompareTag("FinalPortal3"))
         {
+            GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl04.transform.position;
+            transform.rotation = defaultRotation;
+        }
+
+        if (other.gameObject.CompareTag("FinalPortal4"))
+        {
+            winningHud.SetActive(true);
         }
 
 

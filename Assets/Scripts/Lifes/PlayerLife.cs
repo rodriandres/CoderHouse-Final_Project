@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PlayerLife : MonoBehaviour
 {
     [SerializeField] private GameObject heartsPanel;
     [SerializeField] private int lifes;
     [SerializeField] private bool dead;
+    [SerializeField] private GameObject lossingHud;
+    private bool startCounter = false;
+    private float counter;
+
+
+    
+
     private void Start()
     {
         Transform lifePanel = transform.Find("LifesPanel");
@@ -19,14 +27,33 @@ public class PlayerLife : MonoBehaviour
         {
             lifePanel.GetChild(i).gameObject.SetActive(true);
         }
+        
+        lossingHud.SetActive(false);
     }
     // Update is called once per frame
     void Update()
     {
+        if (lifes <= 0)
+        {
+            dead = true;
+        }
+
         if (dead)
         {
             Debug.Log("Your are Dead");
-            // Set Dead Event
+            lossingHud.SetActive(true);
+            Time.timeScale = 0f;
+            startCounter = true;
+        }
+        
+        if (startCounter)
+        {
+            counter += Time.deltaTime;
+        }
+
+        if (counter >= 3f)
+        {
+            Application.Quit();
         }
     }
     public void TakeDamage(int dmg)
