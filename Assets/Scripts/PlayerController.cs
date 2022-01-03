@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour
         {
             winningHud.SetActive(true);
             FindObjectOfType<AudioManager>().Play("PortalJump");
+            FindObjectOfType<AudioManager>().Play("Winning");
         }
 
 

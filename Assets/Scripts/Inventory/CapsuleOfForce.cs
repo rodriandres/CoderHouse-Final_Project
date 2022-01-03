@@ -63,7 +63,8 @@ public class CapsuleOfForce : MonoBehaviour, IInvetoryItem
     {
         Debug.Log("May the force be with you");
         InstantiateForce();
-        //source.PlayOneShot(clip);
+        FindObjectOfType<AudioManager>().Play("ForceFX");
+
     }
     private void InstantiateForce()
     {
