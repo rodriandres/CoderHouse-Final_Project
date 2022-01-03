@@ -12,7 +12,7 @@ public class SpawnerController : MonoBehaviour
     [SerializeField] enum Difficulties { Easy = 1, Normal , Hard}
     [SerializeField] private Difficulties difficulty;
 
-    [SerializeField] private bool isActive = true;
+    [SerializeField] private bool isActive;
     void Start()
     {
         

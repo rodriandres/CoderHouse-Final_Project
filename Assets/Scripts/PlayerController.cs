@@ -95,22 +95,19 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("FinalPortal1"))
         {
             GameManager.instance.SwitchLevel();
-            transform.position = spawnPointLvl02.transform.position;
-            transform.rotation = defaultRotation;
+            transform.position = spawnPointLvl02.transform.position;            
         }
 
         if (other.gameObject.CompareTag("FinalPortal2"))
         {
             GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl03.transform.position;
-            transform.rotation = defaultRotation;
         }
 
         if (other.gameObject.CompareTag("FinalPortal3"))
         {
             GameManager.instance.SwitchLevel();
             transform.position = spawnPointLvl04.transform.position;
-            transform.rotation = defaultRotation;
         }
 
         if (other.gameObject.CompareTag("FinalPortal4"))

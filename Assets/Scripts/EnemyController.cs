@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     [SerializeField] private float speedEnemy = 4f;
-    [SerializeField] private GameObject player;
+    private GameObject player;
     [SerializeField] private float lifetime;
     [SerializeField] private float speedToLook = .5f;
     [SerializeField] private float distanceEnemy = 3;
@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
     void Start()
     {
-        //player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
         rbEnemy = GetComponent<Rigidbody>();
     }
 

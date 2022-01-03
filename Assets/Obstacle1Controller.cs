@@ -30,7 +30,7 @@ public class Obstacle1Controller : MonoBehaviour
 
         if (collision.collider == playerCol)
         {
-            script.TakeDamage(1);
+            script.TakeDamage(0);
         }
     }
 }
