@@ -76,7 +76,7 @@ public class PlayerLife : MonoBehaviour
     public void HealLife(int healValue)
     {
         Transform lifePanel = transform.Find("LifesPanel");
-        Debug.Log(lifePanel);
+        
         if (lifes >= 1)
         {
             lifes += healValue;

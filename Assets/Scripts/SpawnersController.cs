@@ -11,8 +11,7 @@ public class SpawnersController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DisableSpawners();
-        
+        DisableSpawners();        
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class SpawnersController : MonoBehaviour
         for (int i = 0; i < spawners.Length; i++)
         {
             //spawners[i].SetActive(false);
-            GetSpawnerController(spawners[i]).SetActiveSpawner(true);
+            GetSpawnerController(spawners[i]).SetActiveSpawner(false);
 
         }
     }
