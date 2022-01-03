@@ -4980,6 +4980,8 @@ MonoBehaviour:
   inventory: {fileID: 0}
   Hud: {fileID: 0}
   Health: 4
+  source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 1e8cc3a4a9aaabd40a4123da8d81d5e3, type: 3}
 --- !u!114 &5689934430067054386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5034,7 +5036,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bea04534f9184a44c9fc21c17c1dc697, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.138
+  m_Volume: 0.042
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5128,9 +5130,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c13337a7c3a5e864da1a7edbc5f4c9f1, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8eff92d1593a8784ba7c3ab15593be92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.155
   m_Pitch: 1
   Loop: 1
   Mute: 0
