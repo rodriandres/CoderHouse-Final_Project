@@ -54,5 +54,7 @@ public class SphereHealth : MonoBehaviour, IInvetoryItem
         PlayerController player = Player.GetComponent<PlayerController>();
         player.Health += 1;
         lifes.HealLife(healthIncrease);
+        FindObjectOfType<AudioManager>().Play("1Up");
+
     }
 }
