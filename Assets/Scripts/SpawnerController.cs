@@ -6,40 +6,48 @@ public class SpawnerController : MonoBehaviour
 {
     [SerializeField] public GameObject[] enemyPrefab;
     [SerializeField] public float startDelay = 2;
-    [SerializeField] public float spawnInterval = 1.5f;
-    
+    [SerializeField] public float spawnInterval;
+    [SerializeField] public float dafaultSpawnInterval = 1.5f;
+
+    [SerializeField] float _counter = 0f;
 
     [SerializeField] enum Difficulties { Easy = 1, Normal , Hard}
     [SerializeField] private Difficulties difficulty;
 
-    [SerializeField] private bool isActive;
     void Start()
     {
-        
+
         switch (difficulty)
         {
             case Difficulties.Easy:
                 //Debug.Log("EASY MODE");
-                InvokeRepeating("SpawnEnemy", startDelay + 3f, spawnInterval + 3f);
+
+                spawnInterval = dafaultSpawnInterval + 3f;
                 break;
             case Difficulties.Normal:
                 //Debug.Log("NORMAL MODE");
-                InvokeRepeating("SpawnEnemy", startDelay, spawnInterval);
+                spawnInterval = dafaultSpawnInterval;
                 break;
             case Difficulties.Hard:
                 //Debug.Log("HARD MODE");
-                InvokeRepeating("SpawnEnemy", startDelay - 1f, spawnInterval -1f);
+                spawnInterval = dafaultSpawnInterval - 1f;
                 break;
             default:
-                //Debug.Log("ERROR THIS IS NOT A GAME MODE AVAILABLE");
+                Debug.Log("ERROR THIS IS NOT A GAME MODE AVAILABLE");
                 break;
         }
     }
-    
+
     [SerializeField]
-    void Update()
+    private void Update()
     {
-        
+        _counter+= Time.deltaTime;
+
+        if (_counter >= spawnInterval)
+        {
+            SpawnEnemy();
+            _counter = 0f;
+        }
     }
 
     [SerializeField]
@@ -49,8 +57,4 @@ public class SpawnerController : MonoBehaviour
         Instantiate(enemyPrefab[enemyIndex], transform.position, enemyPrefab[enemyIndex].transform.rotation);
     }
 
-    public void SetActiveSpawner(bool status)
-    {
-        isActive = status;
-    }
 }
